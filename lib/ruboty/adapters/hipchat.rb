@@ -34,6 +34,7 @@ module Ruboty
           nickname: nickname,
           password: password,
           room_jid: room_jids.join(","),
+          port: port,
         )
       end
 
@@ -62,6 +63,11 @@ module Ruboty
 
       def nickname
         ENV["HIPCHAT_NICKNAME"]
+      end
+
+      def port
+        port = ENV["HIPCHAT_PORT"]
+        port&.to_i
       end
 
       def bind
