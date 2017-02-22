@@ -49,7 +49,7 @@ module Ruboty
       # @note HIPCHAT_ROOM_NAME can be ASCII-8BIT
       def room_jids
         room_names.map do |room_name|
-          room_name.force_encoding("UTF-8") + "@conf.hipchat.com"
+          room_name.force_encoding("UTF-8")
         end
       end
 
